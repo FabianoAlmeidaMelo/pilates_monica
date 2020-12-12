@@ -231,27 +231,27 @@
 
             <ul class="list-inline mb-0">
               <li v-if="redes_sociais.whatsapp" class="list-inline-item mr-3">
-                <a href="redes_sociais.whats_link">
+                <a v-bind:href="redes_sociais.whats_link">
                   <i class="fab fa-whatsapp fa-2x fa-fw"></i>
                 </a>
               </li>
               <li v-if="redes_sociais.facebook" class="list-inline-item mr-3">
-                <a href="">
+                <a v-bind:href="redes_sociais.face_link">
                   <i class="fab fa-facebook fa-2x fa-fw"></i>
                 </a>
               </li>
               <li v-if="redes_sociais.twitter" class="list-inline-item mr-3">
-                <a href="#">
+                <a v-bind:href="redes_sociais.twitter_link">
                   <i class="fab fa-twitter-square fa-2x fa-fw"></i>
                 </a>
               </li>
               <li v-if="redes_sociais.instagram" class="list-inline-item"> 
-                <a href="redes_sociais.isnta_link">
+                <a v-bind:href="redes_sociais.isnta_link">
                   <i class="fab fa-instagram fa-2x fa-fw"></i>
                 </a>
               </li>
               <li v-if="redes_sociais.youtube" class="list-inline-item"> 
-                <a href="redes_sociais.youtube_link">
+                <a v-bind:href="redes_sociais.youtube_link">
                   <i class="fab fa-youtube fa-2x fa-fw"></i>
                 </a>
               </li>
