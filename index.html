@@ -98,36 +98,35 @@
     <section id="sectionOne" class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" v-bind:style="{ 'background-image': 'url(' + primeira_secao.url_foto + ')' }"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>{{primeira_secao.titulo}}</h2>
             <p class="lead mb-0">{{primeira_secao.conteudo}}</p>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" v-bind:style="{ 'background-image': 'url(' + segunda_secao.url_foto + ')' }"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>{{segunda_secao.titulo}}</h2>
             <p class="lead mb-0">{{segunda_secao.conteudo}}</p>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" v-bind:style="{ 'background-image': 'url(' + terceira_secao.url_foto + ')' }"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>{{terceira_secao.titulo}}</h2>
             <p class="lead mb-0">{{terceira_secao.conteudo}}</p>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" v-bind:style="{ 'background-image': 'url(' + quarta_secao.url_foto + ')' }">
           <div class="col-lg-6 my-auto showcase-text">
             <h2>{{quarta_secao.titulo}}</h2>
             <p class="lead mb-0">{{quarta_secao.conteudo}}</p>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" v-bind:style="{ 'background-image': 'url(' + terceira_secao.url_foto + ')' }"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>{{quinta_secao.titulo}}</h2>
             <p class="lead mb-0">{{quinta_secao.conteudo}}</p>
@@ -299,12 +298,12 @@
           segunda_secao: {
             titulo: "Por que Pilates?",
             conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
+            url_foto: 'img/bg-showcase-2.jpg'
           },
           terceira_secao: {
             titulo: "Por que Pilates?",
             conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
+            url_foto: 'img/bg-showcase-3.jpg'
           },
           quarta_secao: {
             titulo: "Por que Pilates?",
@@ -314,7 +313,7 @@
           quinta_secao: {
             titulo: "Por que Pilates?",
             conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
+            url_foto: 'img/bg-showcase-2.jpg'
           },
           testemunho: {
             titulo: "O que nossos clientes estão dizendo ...",
