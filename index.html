@@ -44,7 +44,12 @@
           <a class="navbar-brand" href="#secaoQuatro">Seção Quatro</a>
           <a class="navbar-brand" href="#secaoCinco">Seção Cinco</a>
           <a class="navbar-brand" href="#footer">Contatos</a>
-          <a class="btn btn-primary" href="#">Sign In</a>
+          <a
+            class="btn btn-primary"
+            v-on:click.prevent="redesSociais()"
+            href="#"
+            >Sign In</a
+          >
         </div>
       </nav>
 
@@ -82,7 +87,7 @@
         </div>
       </header>
       <!-- <pre>
-        {{ elements }}
+        {{ instagram }}
       </pre> -->
       <!-- Icons Grid -->
       <section id="secaoZero" class="features-icons bg-light text-center">
@@ -128,7 +133,7 @@
       <!-- Image Showcases -->
       <section class="showcase">
         <div class="container-fluid p-0">
-          <div  id="secaoUm" class="row no-gutters">
+          <div id="secaoUm" class="row no-gutters">
             <div
               class="col-lg-6 order-lg-2 text-white showcase-img"
               v-bind:style="{ 'background-image': 'url(' + primeira_secao.url_foto + ')' }"
@@ -301,28 +306,33 @@
             <!-- INI Redes Sociais Administráveis: -->
             <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
               <ul class="list-inline mb-0">
-                <li v-if="redes_sociais.whatsapp" class="list-inline-item mr-3">
-                  <a v-bind:href="redes_sociais.whats_link">
+                <li v-if="whatsapp.link" class="list-inline-item mr-3">
+                  <a v-bind:href="whatsapp.link">
                     <i class="fab fa-whatsapp fa-2x fa-fw"></i>
                   </a>
                 </li>
-                <li v-if="redes_sociais.facebook" class="list-inline-item mr-3">
-                  <a v-bind:href="redes_sociais.face_link">
+                <li v-if="facebook.link" class="list-inline-item mr-3">
+                  <a v-bind:href="facebook.link">
                     <i class="fab fa-facebook fa-2x fa-fw"></i>
                   </a>
                 </li>
-                <li v-if="redes_sociais.twitter" class="list-inline-item mr-3">
-                  <a v-bind:href="redes_sociais.twitter_link">
+                <li v-if="twitter.link" class="list-inline-item mr-3">
+                  <a v-bind:href="twitter.link">
                     <i class="fab fa-twitter-square fa-2x fa-fw"></i>
                   </a>
-                </li>
-                <li v-if="redes_sociais.instagram" class="list-inline-item">
-                  <a v-bind:href="redes_sociais.isnta_link">
+                </li> 
+                <li v-if="instagram.link" class="list-inline-item">
+                  <a v-bind:href="instagram.link">
                     <i class="fab fa-instagram fa-2x fa-fw"></i>
                   </a>
                 </li>
-                <li v-if="redes_sociais.youtube" class="list-inline-item">
-                  <a v-bind:href="redes_sociais.youtube_link">
+                <li v-if="linkedin.link" class="list-inline-item">
+                  <a v-bind:href="linkedin.link">
+                    <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li v-if="youtube.link" class="list-inline-item">
+                  <a v-bind:href="youtube.link">
                     <i class="fab fa-youtube fa-2x fa-fw"></i>
                   </a>
                 </li>
@@ -344,27 +354,39 @@
       var app = new Vue({
         el: "#app",
         async mounted() {
-          this.elements = await fetch("http://localhost:3000/posts/")
-            .then(function (response) {
+          this.elements = await fetch("http://localhost:3000/posts/").then(
+            function (response) {
               return response.json();
-            })
+            }
+          );
+          this.instagram = this.elements.filter(function (elements) {
+            return elements.secao == "instagram";
+          })[0];
+          this.whatsapp = this.elements.filter(function (elements) {
+            return elements.secao == "whatsapp";
+          })[0];
+          this.facebook = this.elements.filter(function (elements) {
+            return elements.secao == "facebook";
+          })[0];
+          this.twitter = this.elements.filter(function (elements) {
+            return elements.secao == "twitter";
+          })[0];
+          this.youtube = this.elements.filter(function (elements) {
+            return elements.secao == "youtube";
+          })[0];
+          this.linkedin = this.elements.filter(function (elements) {
+            return elements.secao == "linkedin";
+          })[0];
         },
         data() {
           return {
             elements: [],
-            redes_sociais: {
-              instagram: true,
-              isnta_link:
-                "https://www.instagram.com/pilatesmonicasales/?hl=pt-br",
-              facebook: false,
-              face_link: "",
-              whatsapp: true,
-              whats_link: "https://api.whatsapp.com/send?phone=5512997417970",
-              twiter: false,
-              twiter_link: "",
-              youtube: false,
-              youtube_link: "",
-            },
+            instagram: {},
+            whatsapp: {},
+            facebook: {},
+            twitter: {},
+            youtube: {},
+            linkedin: {},
             foto_principal: {
               frase: "Pilates é saúde! Pilates é vida! #Movimente-se!",
               foto: "",
