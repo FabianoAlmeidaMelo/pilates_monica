@@ -189,27 +189,18 @@
       <!-- Testimonials -->
       <section id="sectionTwo" class="testimonials text-center bg-light">
         <div class="container">
-          <h2 class="mb-5">{{ testemunho.titulo }}</h2>
-          <!-- <div class="row" v-for="pessoa in testemunho.pessoas">
-            <div class="col-lg-4">
-              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img class="img-fluid rounded-circle mb-3" v-bind:src="pessoa.foto" alt="">
-                <h5>{{pessoa.nome}}</h5>
-                <p class="font-weight-light mb-0">"{{pessoa.comentario}}"</p>
-              </div>
-            </div>
-          </div> -->
+          <h2 class="mb-5">{{ galeria.titulo }}</h2>
           <div class="row">
             <div class="col-lg-4">
               <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                 <img
                   class="img-fluid rounded-circle mb-3"
-                  v-bind:src="testemunho.pessoas[0].foto"
+                  v-bind:src="galeriaUm.foto"
                   alt=""
                 />
-                <h5>{{ testemunho.pessoas[0].nome }}</h5>
+                <h5>{{ galeriaUm.titulo }}</h5>
                 <p class="font-weight-light mb-0">
-                  {{ testemunho.pessoas[0].comentario }}
+                  {{ galeriaUm.texto }}
                 </p>
               </div>
             </div>
@@ -217,12 +208,12 @@
               <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                 <img
                   class="img-fluid rounded-circle mb-3"
-                  v-bind:src="testemunho.pessoas[1].foto"
+                  v-bind:src="galeriaDois.foto"
                   alt=""
                 />
-                <h5>{{ testemunho.pessoas[1].nome }}</h5>
+                <h5>{{ galeriaDois.titulo }}</h5>
                 <p class="font-weight-light mb-0">
-                  {{ testemunho.pessoas[1].comentario }}
+                  {{ galeriaDois.texto }}
                 </p>
               </div>
             </div>
@@ -377,6 +368,18 @@
           this.linkedin = this.elements.filter(function (elements) {
             return elements.secao == "linkedin";
           })[0];
+          this.galeria = this.elements.filter(function (elements) {
+            return elements.secao == "galeria";
+          })[0];
+          this.galeriaUm = this.elements.filter(function (elements) {
+            return elements.secao == "galeria_um";
+          })[0];
+          this.galeriaDois = this.elements.filter(function (elements) {
+            return elements.secao == "galeria_dois";
+          })[0];
+          this.galeriaTres = this.elements.filter(function (elements) {
+            return elements.secao == "galeria_tres";
+          })[0];
         },
         data() {
           return {
@@ -387,6 +390,10 @@
             twitter: {},
             youtube: {},
             linkedin: {},
+            galeria : {},
+            galeriaUm: {},
+            galeriaDois: {},
+            galeriaTres: {},
             foto_principal: {
               frase: "Pilates é saúde! Pilates é vida! #Movimente-se!",
               foto: "",
