@@ -59,8 +59,8 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-9 mx-auto">
-              <h1 class="mb-5">{{ zero_secao.titulo }}</h1>
-              <h3>{{ zero_secao.conteudo }}</h3>
+              <h1 class="mb-5">{{ fotoPrincipal.titulo }}</h1>
+              <h3>{{ fotoPrincipal.texto }}</h3>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
               <form>
@@ -380,6 +380,9 @@
           this.galeriaTres = this.elements.filter(function (elements) {
             return elements.secao == "galeria_tres";
           })[0];
+          this.fotoPrincipal = this.elements.filter(function (elements) {
+            return elements.secao == "foto_principal";
+          })[0];
         },
         data() {
           return {
@@ -394,14 +397,10 @@
             galeriaUm: {},
             galeriaDois: {},
             galeriaTres: {},
+            fotoPrincipal: {},
             foto_principal: {
               frase: "Pilates é saúde! Pilates é vida! #Movimente-se!",
               foto: "",
-            },
-            zero_secao: {
-              titulo: "Pilates é saúde! Pilates é vida! #Movimente-se!",
-              conteudo: "",
-              url_foto: "",
             },
             primeira_secao: {
               titulo: "Seção 1",
