@@ -86,9 +86,7 @@
           </div>
         </div>
       </header>
-      <!-- <pre>
-        {{ instagram }}
-      </pre> -->
+
       <!-- Icons Grid -->
       <section id="secaoZero" class="features-icons bg-light text-center">
         <div class="container">
@@ -136,51 +134,51 @@
           <div id="secaoUm" class="row no-gutters">
             <div
               class="col-lg-6 order-lg-2 text-white showcase-img"
-              v-bind:style="{ 'background-image': 'url(' + primeira_secao.url_foto + ')' }"
+              v-bind:style="{ 'background-image': 'url(' + primeiraSecao.foto + ')' }"
             ></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h2><a href="#page-top">{{primeira_secao.titulo}}</a></h2>
-              <p class="lead mb-0">{{primeira_secao.conteudo}}</p>
+              <h2><a href="#page-top">{{primeiraSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{primeiraSecao.texto}}</p>
             </div>
           </div>
           <div id="secaoDois" class="row no-gutters">
             <div
               class="col-lg-6 text-white showcase-img"
-              v-bind:style="{ 'background-image': 'url(' + segunda_secao.url_foto + ')' }"
+              v-bind:style="{ 'background-image': 'url(' + segundaSecao.foto + ')' }"
             ></div>
             <div class="col-lg-6 my-auto showcase-text">
-              <h2><a href="#page-top">{{segunda_secao.titulo}}</a></h2>
-              <p class="lead mb-0">{{segunda_secao.conteudo}}</p>
+              <h2><a href="#page-top">{{segundaSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{segundaSecao.texto}}</p>
             </div>
           </div>
           <div id="secaoTres" class="row no-gutters">
             <div
               class="col-lg-6 order-lg-2 text-white showcase-img"
-              v-bind:style="{ 'background-image': 'url(' + terceira_secao.url_foto + ')' }"
+              v-bind:style="{ 'background-image': 'url(' + terceiraSecao.foto + ')' }"
             ></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h2><a href="#page-top">{{terceira_secao.titulo}}</a></h2>
-              <p class="lead mb-0">{{terceira_secao.conteudo}}</p>
+              <h2><a href="#page-top">{{terceiraSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{terceiraSecao.texto}}</p>
             </div>
           </div>
           <div id="secaoQuatro" class="row no-gutters">
             <div
               class="col-lg-6 text-white showcase-img"
-              v-bind:style="{ 'background-image': 'url(' + quarta_secao.url_foto + ')' }"
+              v-bind:style="{ 'background-image': 'url(' + quartaSecao.foto + ')' }"
             ></div>
             <div class="col-lg-6 my-auto showcase-text">
-              <h2><a href="#page-top">{{quarta_secao.titulo}}</a></h2>
-              <p class="lead mb-0">{{quarta_secao.conteudo}}</p>
+              <h2><a href="#page-top">{{quartaSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{quartaSecao.texto}}</p>
             </div>
           </div>
           <div id="secaoCinco" class="row no-gutters">
             <div
               class="col-lg-6 order-lg-2 text-white showcase-img"
-              v-bind:style="{ 'background-image': 'url(' + terceira_secao.url_foto + ')' }"
+              v-bind:style="{ 'background-image': 'url(' + quintaSecao.foto + ')' }"
             ></div>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-              <h2><a href="#page-top">{{quinta_secao.titulo}}</a></h2>
-              <p class="lead mb-0">{{quinta_secao.conteudo}}</p>
+              <h2><a href="#page-top">{{quintaSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{quintaSecao.texto}}</p>
             </div>
           </div>
         </div>
@@ -383,6 +381,21 @@
           this.fotoPrincipal = this.elements.filter(function (elements) {
             return elements.secao == "foto_principal";
           })[0];
+          this.primeiraSecao = this.elements.filter(function (elements) {
+            return elements.secao == "primeira";
+          })[0];
+          this.segundaSecao = this.elements.filter(function (elements) {
+            return elements.secao == "segunda";
+          })[0];
+          this.terceiraSecao = this.elements.filter(function (elements) {
+            return elements.secao == "terceira";
+          })[0];
+          this.quartaSecao = this.elements.filter(function (elements) {
+            return elements.secao == "quarta";
+          })[0];
+          this.quintaSecao = this.elements.filter(function (elements) {
+            return elements.secao == "quinta";
+          })[0];
         },
         data() {
           return {
@@ -398,10 +411,11 @@
             galeriaDois: {},
             galeriaTres: {},
             fotoPrincipal: {},
-            foto_principal: {
-              frase: "Pilates é saúde! Pilates é vida! #Movimente-se!",
-              foto: "",
-            },
+            primeiraSecao: {},
+            segundaSecao: {},
+            terceiraSecao: {},
+            quartaSecao: {},
+            uintaSecao: {},
             primeira_secao: {
               titulo: "Seção 1",
               conteudo:
