@@ -15,6 +15,7 @@
     {"id": 13,"secao":"galeria", "titulo" : "O que nossos clientes estão dizendo ...", "texto": null,  "foto": null, "link": null},
     {"id": 14,"secao":"galeria_um", "titulo" : "Margaret E.", "texto": "Estou amando fazer Pilates! O Estúdio da Mônica é ótimo",  "foto": "img/testimonials-1.jpg", "link": null},
     {"id": 15,"secao":"galeria_dois", "titulo" : "Fred S.", "texto": "Minha flexibilidade melhoru muito, achava que não era para mim. Fantástico",  "foto": "img/testimonials-2.jpg", "link": null},
-    {"id": 16,"secao":"galeria_tres", "titulo" : "Sarah W.", "texto": "Não fico sem! Pelo menos uma vez por semana tenho que praticar",  "foto": "img/testimonials-3.jpg", "link": null}
+    {"id": 16,"secao":"galeria_tres", "titulo" : "Sarah W.", "texto": "Não fico sem! Pelo menos uma vez por semana tenho que praticar",  "foto": "img/testimonials-3.jpg", "link": null},
+    {"id": 17,"secao":"galeria2", "titulo" : "Nossos Parceiros", "texto": "Parceria de sucesso, unindo forças pela sua saúde e bem estar",  "foto": null, "link": null}
   ]
 }

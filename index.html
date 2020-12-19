@@ -37,13 +37,13 @@
       <!-- Navigation -->
       <nav class="navbar navbar-light bg-light static-top">
         <div class="container">
-          <a class="navbar-brand" href="#secaoZero">Profissonais</a>
           <a class="navbar-brand" href="#secaoUm">Seção Um</a>
           <a class="navbar-brand" href="#secaoDois">Seção Dois</a>
           <a class="navbar-brand" href="#secaoTres">Seção Três</a>
           <a class="navbar-brand" href="#secaoQuatro">Seção Quatro</a>
           <a class="navbar-brand" href="#secaoCinco">Seção Cinco</a>
-          <a class="navbar-brand" href="#footer">Contatos</a>
+          <a class="navbar-brand" href="#clientes">Clientes</a>
+          <a class="navbar-brand" href="#footer">Parceiros</a>
           <a
             class="btn btn-primary"
             v-on:click.prevent="redesSociais()"
@@ -87,47 +87,49 @@
         </div>
       </header>
 
-      <!-- Icons Grid -->
-      <section id="secaoZero" class="features-icons bg-light text-center">
+      <!-- I Clientes -->
+      <section id="clientes" class="testimonials text-center bg-light">
         <div class="container">
+          <h2 class="mb-5"><a href="#page-top">{{ galeria.titulo }}</a></h2>
           <div class="row">
             <div class="col-lg-4">
-              <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                <div class="features-icons-icon d-flex">
-                  <i class="icon-screen-desktop m-auto text-primary"></i>
-                </div>
-                <h3>Fully Responsive</h3>
-                <p class="lead mb-0">
-                  This theme will look great on any device, no matter the size!
-                </p>
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img
+                  class="img-fluid rounded-circle mb-3"
+                  v-bind:src="galeriaUm.foto"
+                  alt=""
+                />
+                <h5>{{ galeriaUm.titulo }}</h5>
+                <p class="font-weight-light mb-0">{{ galeriaUm.texto }}</p>
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                <div class="features-icons-icon d-flex">
-                  <i class="icon-layers m-auto text-primary"></i>
-                </div>
-                <h3>Bootstrap 4 Ready</h3>
-                <p class="lead mb-0">
-                  Featuring the latest build of the new Bootstrap 4 framework!
-                </p>
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img
+                  class="img-fluid rounded-circle mb-3"
+                  v-bind:src="galeriaDois.foto"
+                  alt=""
+                />
+                <h5>{{ galeriaDois.titulo }}</h5>
+                <p class="font-weight-light mb-0">{{ galeriaDois.texto }}</p>
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                <div class="features-icons-icon d-flex">
-                  <i class="icon-check m-auto text-primary"></i>
-                </div>
-                <h3>Easy to Use</h3>
-                <p class="lead mb-0">
-                  Ready to use with your own content, or customize the source
-                  files!
-                </p>
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img
+                  class="img-fluid rounded-circle mb-3"
+                  v-bind:src="galeriaTres.foto"
+                  alt=""
+                />
+                <h5>{{ galeriaTres.titulo }}</h5>
+                <p class="font-weight-light mb-0">{{ galeriaTres.texto }}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- f Clientes -->
+
       <!-- Image Showcases -->
       <section class="showcase">
         <div class="container-fluid p-0">
@@ -184,47 +186,43 @@
         </div>
       </section>
 
-      <!-- Testimonials -->
-      <section id="sectionTwo" class="testimonials text-center bg-light">
+      <!-- Parceiros -->
+      <section id="secaoZero" class="features-icons bg-light text-center">
         <div class="container">
-          <h2 class="mb-5">{{ galeria.titulo }}</h2>
+          <h5><a href="#page-top">{{ galeria2.titulo }}</a></h5>
+          <p class="font-weight-light mb-0">{{ galeria2.texto }}</p>
           <div class="row">
             <div class="col-lg-4">
-              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img
-                  class="img-fluid rounded-circle mb-3"
-                  v-bind:src="galeriaUm.foto"
-                  alt=""
-                />
-                <h5>{{ galeriaUm.titulo }}</h5>
-                <p class="font-weight-light mb-0">
-                  {{ galeriaUm.texto }}
+              <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                <div class="features-icons-icon d-flex">
+                  <i class="icon-screen-desktop m-auto text-primary"></i>
+                </div>
+                <h3>Fully Responsive</h3>
+                <p class="lead mb-0">
+                  This theme will look great on any device, no matter the size!
                 </p>
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img
-                  class="img-fluid rounded-circle mb-3"
-                  v-bind:src="galeriaDois.foto"
-                  alt=""
-                />
-                <h5>{{ galeriaDois.titulo }}</h5>
-                <p class="font-weight-light mb-0">
-                  {{ galeriaDois.texto }}
+              <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                <div class="features-icons-icon d-flex">
+                  <i class="icon-layers m-auto text-primary"></i>
+                </div>
+                <h3>Bootstrap 4 Ready</h3>
+                <p class="lead mb-0">
+                  Featuring the latest build of the new Bootstrap 4 framework!
                 </p>
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img
-                  class="img-fluid rounded-circle mb-3"
-                  v-bind:src="testemunho.pessoas[2].foto"
-                  alt=""
-                />
-                <h5>{{ testemunho.pessoas[2].nome }}</h5>
-                <p class="font-weight-light mb-0">
-                  {{ testemunho.pessoas[2].comentario }}
+              <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                <div class="features-icons-icon d-flex">
+                  <i class="icon-check m-auto text-primary"></i>
+                </div>
+                <h3>Easy to Use</h3>
+                <p class="lead mb-0">
+                  Ready to use with your own content, or customize the source
+                  files!
                 </p>
               </div>
             </div>
@@ -233,14 +231,14 @@
       </section>
 
       <!-- Call to Action -->
-      <section class="call-to-action text-white text-center">
+      <section id="redes" class="call-to-action text-white text-center">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
-            <div class="col-xl-9 mx-auto">
+            <div v-if="false" class="col-xl-9 mx-auto">
               <h2 class="mb-4">Ready to get started? Sign up now!</h2>
             </div>
-            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <div v-if="false" class="col-md-10 col-lg-8 col-xl-7 mx-auto">
               <form>
                 <div class="form-row">
                   <div class="col-12 col-md-9 mb-2 mb-md-0">
@@ -309,7 +307,7 @@
                   <a v-bind:href="twitter.link">
                     <i class="fab fa-twitter-square fa-2x fa-fw"></i>
                   </a>
-                </li> 
+                </li>
                 <li v-if="instagram.link" class="list-inline-item">
                   <a v-bind:href="instagram.link">
                     <i class="fab fa-instagram fa-2x fa-fw"></i>
@@ -396,6 +394,9 @@
           this.quintaSecao = this.elements.filter(function (elements) {
             return elements.secao == "quinta";
           })[0];
+          this.galeria2 = this.elements.filter(function (elements) {
+            return elements.secao == "galeria2";
+          })[0];
         },
         data() {
           return {
@@ -406,7 +407,7 @@
             twitter: {},
             youtube: {},
             linkedin: {},
-            galeria : {},
+            galeria: {},
             galeriaUm: {},
             galeriaDois: {},
             galeriaTres: {},
@@ -415,60 +416,8 @@
             segundaSecao: {},
             terceiraSecao: {},
             quartaSecao: {},
-            uintaSecao: {},
-            primeira_secao: {
-              titulo: "Seção 1",
-              conteudo:
-                '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-              url_foto: "img/bg-showcase-1.jpg",
-            },
-            segunda_secao: {
-              titulo: "Seção 2",
-              conteudo:
-                '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-              url_foto: "img/bg-showcase-2.jpg",
-            },
-            terceira_secao: {
-              titulo: "Seção 3",
-              conteudo:
-                '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-              url_foto: "img/bg-showcase-3.jpg",
-            },
-            quarta_secao: {
-              titulo: "Seção 4",
-              conteudo:
-                '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-              url_foto: "img/bg-showcase-1.jpg",
-            },
-            quinta_secao: {
-              titulo: "Seção 5",
-              conteudo:
-                '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-              url_foto: "img/bg-showcase-2.jpg",
-            },
-            testemunho: {
-              titulo: "O que nossos clientes estão dizendo ...",
-              pessoas: [
-                {
-                  nome: "Margaret E.",
-                  comentario:
-                    "Estou amando fazer Pilates! O Estúdio da Mônica é ótimo",
-                  foto: "img/testimonials-1.jpg",
-                },
-                {
-                  nome: "Fred S.",
-                  comentario:
-                    "Minha flexibilidade melhoru muito, achava que não era para mim. Fantástico",
-                  foto: "img/testimonials-2.jpg",
-                },
-                {
-                  nome: "Sarah W.",
-                  comentario:
-                    "Não fico sem! Pelo menos uma vez por semana tenho que praticar",
-                  foto: "img/testimonials-3.jpg",
-                },
-              ],
-            },
+            quintaSecao: {},
+            galeria2: {},
           };
         },
       });
