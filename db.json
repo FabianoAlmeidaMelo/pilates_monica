@@ -1,21 +1,21 @@
 {
   "posts": [
-    {"id": 1,"secao":"instagram", "titulo": null, "texto": null, "foto": null, "link": "https://www.instagram.com/pilatesmonicasales/?hl=pt-br"},
-    {"id": 2,"secao":"facebook", "titulo": null, "texto": null, "foto": null, "link": null},
-    {"id": 3,"secao":"whatsapp", "titulo": null, "texto": null, "foto": null, "link": "https://api.whatsapp.com/send?phone=5512997417970"},
-    {"id": 4,"secao":"twitter", "titulo": null, "texto": null, "foto": null, "link": null},
-    {"id": 5,"secao":"youtube", "titulo": null, "texto": null, "foto": null, "link": null},
-    {"id": 6,"secao":"linkedin", "titulo": null, "texto": null, "foto": null, "link": null},
-    {"id": 7,"secao":"foto_principal", "titulo": "Pilates é saúde! Pilates é vida! #Movimente-se!", "texto": null, "foto": null, "link": null},
-    {"id": 8,"secao":"primeira", "titulo" : "Seção 1", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-1.jpg", "link": null},
-    {"id": 9,"secao":"segunda", "titulo" : "Seção 2", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-2.jpg", "link": null},
-    {"id": 10,"secao":"terceira", "titulo" : "Seção 3", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-3.jpg", "link": null},
-    {"id": 11,"secao":"quarta", "titulo" : "Seção 4", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-1.jpg", "link": null},
-    {"id": 12,"secao":"quinta", "titulo" : "Seção 5", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-2.jpg", "link": null},
-    {"id": 13,"secao":"galeria", "titulo" : "O que nossos clientes estão dizendo ...", "texto": null,  "foto": null, "link": null},
-    {"id": 14,"secao":"galeria_um", "titulo" : "Margaret E.", "texto": "Estou amando fazer Pilates! O Estúdio da Mônica é ótimo",  "foto": "img/testimonials-1.jpg", "link": null},
-    {"id": 15,"secao":"galeria_dois", "titulo" : "Fred S.", "texto": "Minha flexibilidade melhoru muito, achava que não era para mim. Fantástico",  "foto": "img/testimonials-2.jpg", "link": null},
-    {"id": 16,"secao":"galeria_tres", "titulo" : "Sarah W.", "texto": "Não fico sem! Pelo menos uma vez por semana tenho que praticar",  "foto": "img/testimonials-3.jpg", "link": null},
-    {"id": 17,"secao":"galeria2", "titulo" : "Nossos Parceiros", "texto": "Parceria de sucesso, unindo forças pela sua saúde e bem estar",  "foto": null, "link": null}
+    {"id": 1,"chave":"instagram", "titulo": null, "texto": null, "foto": null, "link": "https://www.instagram.com/pilatesmonicasales/?hl=pt-br"},
+    {"id": 2,"chave":"facebook", "titulo": null, "texto": null, "foto": null, "link": null},
+    {"id": 3,"chave":"whatsapp", "titulo": null, "texto": null, "foto": null, "link": "https://api.whatsapp.com/send?phone=5512997417970"},
+    {"id": 4,"chave":"twitter", "titulo": null, "texto": null, "foto": null, "link": null},
+    {"id": 5,"chave":"youtube", "titulo": null, "texto": null, "foto": null, "link": null},
+    {"id": 6,"chave":"linkedin", "titulo": null, "texto": null, "foto": null, "link": null},
+    {"id": 7,"chave":"foto_principal", "titulo": "Pilates é saúde! Pilates é vida! #Movimente-se!", "texto": null, "foto": null, "link": null},
+    {"id": 8,"chave":"primeira", "titulo" : "Seção 1", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-1.jpg", "link": null},
+    {"id": 9,"chave":"segunda", "titulo" : "Seção 2", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-2.jpg", "link": null},
+    {"id": 10,"chave":"terceira", "titulo" : "Seção 3", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-3.jpg", "link": null},
+    {"id": 11,"chave":"quarta", "titulo" : "Seção 4", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-1.jpg", "link": null},
+    {"id": 12,"chave":"quinta", "titulo" : "Seção 5", "texto": "Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física",  "foto": "img/bg-showcase-2.jpg", "link": null},
+    {"id": 13,"chave":"galeria", "titulo" : "O que nossos clientes estão dizendo ...", "texto": null,  "foto": null, "link": null},
+    {"id": 14,"chave":"galeria_um", "titulo" : "Margaret E.", "texto": "Estou amando fazer Pilates! O Estúdio da Mônica é ótimo",  "foto": "img/testimonials-1.jpg", "link": null},
+    {"id": 15,"chave":"galeria_dois", "titulo" : "Fred S.", "texto": "Minha flexibilidade melhoru muito, achava que não era para mim. Fantástico",  "foto": "img/testimonials-2.jpg", "link": null},
+    {"id": 16,"chave":"galeria_tres", "titulo" : "Sarah W.", "texto": "Não fico sem! Pelo menos uma vez por semana tenho que praticar",  "foto": "img/testimonials-3.jpg", "link": null},
+    {"id": 17,"chave":"galeria2", "titulo" : "Nossos Parceiros", "texto": "Parceria de sucesso, unindo forças pela sua saúde e bem estar",  "foto": null, "link": null}
   ]
 }
