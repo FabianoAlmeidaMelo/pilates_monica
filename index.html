@@ -1,345 +1,427 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Fabiano Almeida" />
 
-<head>
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Mônica Sales Pilates</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <link rel="icon" href="img/favicon.ico">
-  <title>Mônica Sales Pilates</title>
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet" />
+  </head>
 
-  <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <body id="page-top">
+    <div id="app">
+      <!-- Navigation -->
+      <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#secaoUm">Seção Um</a>
+          <a class="navbar-brand" href="#secaoDois">Seção Dois</a>
+          <a class="navbar-brand" href="#secaoTres">Seção Três</a>
+          <a class="navbar-brand" href="#secaoQuatro">Seção Quatro</a>
+          <a class="navbar-brand" href="#secaoCinco">Seção Cinco</a>
+          <a class="navbar-brand" href="#clientes">Clientes</a>
+          <a class="navbar-brand" href="#footer">Parceiros</a>
+          <a
+            class="btn btn-primary"
+            v-on:click.prevent="redesSociais()"
+            href="#"
+            >Sign In</a
+          >
+        </div>
+      </nav>
 
-  <!-- Custom styles for this template -->
-  <link href="css/landing-page.min.css" rel="stylesheet">
-
-</head>
-
-<body>
-  <div id="app">
-    <!-- Navigation -->
-    <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#sectionOne">Pilates</a>
-        <a class="navbar-brand" href="#sectionTwo">Beneficios</a>
-        <a class="navbar-brand" href="#footer">Contatos</a>
-        <a class="btn btn-primary" href="#">Sign In</a>
-      </div>
-    </nav>
-
-    <!-- Masthead -->
-    <header class="masthead text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">{{ foto_principal.frase }}</h1>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
-              <div v-if="false" class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+      <!-- Masthead -->
+      <header class="masthead text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 mx-auto">
+              <h1 class="mb-5">{{ fotoPrincipal.titulo }}</h1>
+              <h3>{{ fotoPrincipal.texto }}</h3>
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+              <form>
+                <div v-if="false" class="form-row">
+                  <div class="col-12 col-md-9 mb-2 mb-md-0">
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your email..."
+                    />
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <button
+                      type="submit"
+                      class="btn btn-block btn-lg btn-primary"
+                    >
+                      Sign up!
+                    </button>
+                  </div>
                 </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Icons Grid -->
-    <section class="features-icons bg-light text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-screen-desktop m-auto text-primary"></i>
-              </div>
-              <h3>Fully Responsive</h3>
-              <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-layers m-auto text-primary"></i>
-              </div>
-              <h3>Bootstrap 4 Ready</h3>
-              <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-check m-auto text-primary"></i>
-              </div>
-              <h3>Easy to Use</h3>
-              <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Image Showcases -->
-    <section id="sectionOne" class="showcase">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
+      </header>
 
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>{{primeira_secao.titulo}}</h2>
-            <p class="lead mb-0">{{primeira_secao.conteudo}}</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>{{segunda_secao.titulo}}</h2>
-            <p class="lead mb-0">{{segunda_secao.conteudo}}</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>{{terceira_secao.titulo}}</h2>
-            <p class="lead mb-0">{{terceira_secao.conteudo}}</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>{{quarta_secao.titulo}}</h2>
-            <p class="lead mb-0">{{quarta_secao.conteudo}}</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>{{quinta_secao.titulo}}</h2>
-            <p class="lead mb-0">{{quinta_secao.conteudo}}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="sectionTwo" class="testimonials text-center bg-light">
-      <div class="container">
-        <h2 class="mb-5">{{ testemunho.titulo }}</h2>
-          <!-- <div class="row" v-for="pessoa in testemunho.pessoas">
+      <!-- I Clientes -->
+      <section id="clientes" class="testimonials text-center bg-light">
+        <div class="container">
+          <h2 class="mb-5"><a href="#page-top">{{ galeria.titulo }}</a></h2>
+          <div class="row">
             <div class="col-lg-4">
               <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                <img class="img-fluid rounded-circle mb-3" v-bind:src="pessoa.foto" alt="">
-                <h5>{{pessoa.nome}}</h5>
-                <p class="font-weight-light mb-0">"{{pessoa.comentario}}"</p>
+                <img
+                  class="img-fluid rounded-circle mb-3"
+                  v-bind:src="galeriaUm.foto"
+                  alt=""
+                />
+                <h5>{{ galeriaUm.titulo }}</h5>
+                <p class="font-weight-light mb-0">{{ galeriaUm.texto }}</p>
               </div>
             </div>
-          </div> -->
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" v-bind:src="testemunho.pessoas[0].foto" alt="">
-              <h5>{{ testemunho.pessoas[0].nome }}</h5>
-              <p class="font-weight-light mb-0">{{ testemunho.pessoas[0].comentario }}</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" v-bind:src="testemunho.pessoas[1].foto" alt="">
-              <h5>{{ testemunho.pessoas[1].nome }}</h5>
-              <p class="font-weight-light mb-0">{{ testemunho.pessoas[1].comentario }}</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" v-bind:src="testemunho.pessoas[2].foto" alt="">
-              <h5>{{ testemunho.pessoas[2].nome }}</h5>
-              <p class="font-weight-light mb-0">{{ testemunho.pessoas[2].comentario }}</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
+            <div class="col-lg-4">
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img
+                  class="img-fluid rounded-circle mb-3"
+                  v-bind:src="galeriaDois.foto"
+                  alt=""
+                />
+                <h5>{{ galeriaDois.titulo }}</h5>
+                <p class="font-weight-light mb-0">{{ galeriaDois.texto }}</p>
               </div>
-            </form>
+            </div>
+            <div class="col-lg-4">
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img
+                  class="img-fluid rounded-circle mb-3"
+                  v-bind:src="galeriaTres.foto"
+                  alt=""
+                />
+                <h5>{{ galeriaTres.titulo }}</h5>
+                <p class="font-weight-light mb-0">{{ galeriaTres.texto }}</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- f Clientes -->
 
-    <!-- Footer -->
-    <footer id="footer" class="footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <ul class="list-inline mb-2">
-              <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
-            <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
+      <!-- Image Showcases -->
+      <section class="showcase">
+        <div class="container-fluid p-0">
+          <div id="secaoUm" class="row no-gutters">
+            <div
+              class="col-lg-6 order-lg-2 text-white showcase-img"
+              v-bind:style="{ 'background-image': 'url(' + primeiraSecao.foto + ')' }"
+            ></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+              <h2><a href="#page-top">{{primeiraSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{primeiraSecao.texto}}</p>
+            </div>
           </div>
-
-          <!-- INI Redes Sociais Administráveis: -->
-          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-
-            <ul class="list-inline mb-0">
-              <li v-if="redes_sociais.whatsapp" class="list-inline-item mr-3">
-                <a href="redes_sociais.whats_link">
-                  <i class="fab fa-whatsapp fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li v-if="redes_sociais.facebook" class="list-inline-item mr-3">
-                <a href="">
-                  <i class="fab fa-facebook fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li v-if="redes_sociais.twitter" class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li v-if="redes_sociais.instagram" class="list-inline-item"> 
-                <a href="redes_sociais.isnta_link">
-                  <i class="fab fa-instagram fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li v-if="redes_sociais.youtube" class="list-inline-item"> 
-                <a href="redes_sociais.youtube_link">
-                  <i class="fab fa-youtube fa-2x fa-fw"></i>
-                </a>
-              </li>
-            </ul>
+          <div id="secaoDois" class="row no-gutters">
+            <div
+              class="col-lg-6 text-white showcase-img"
+              v-bind:style="{ 'background-image': 'url(' + segundaSecao.foto + ')' }"
+            ></div>
+            <div class="col-lg-6 my-auto showcase-text">
+              <h2><a href="#page-top">{{segundaSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{segundaSecao.texto}}</p>
+            </div>
           </div>
-          <!-- FIM Mídias Sociais Administráveis: -->
-
+          <div id="secaoTres" class="row no-gutters">
+            <div
+              class="col-lg-6 order-lg-2 text-white showcase-img"
+              v-bind:style="{ 'background-image': 'url(' + terceiraSecao.foto + ')' }"
+            ></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+              <h2><a href="#page-top">{{terceiraSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{terceiraSecao.texto}}</p>
+            </div>
+          </div>
+          <div id="secaoQuatro" class="row no-gutters">
+            <div
+              class="col-lg-6 text-white showcase-img"
+              v-bind:style="{ 'background-image': 'url(' + quartaSecao.foto + ')' }"
+            ></div>
+            <div class="col-lg-6 my-auto showcase-text">
+              <h2><a href="#page-top">{{quartaSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{quartaSecao.texto}}</p>
+            </div>
+          </div>
+          <div id="secaoCinco" class="row no-gutters">
+            <div
+              class="col-lg-6 order-lg-2 text-white showcase-img"
+              v-bind:style="{ 'background-image': 'url(' + quintaSecao.foto + ')' }"
+            ></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+              <h2><a href="#page-top">{{quintaSecao.titulo}}</a></h2>
+              <p class="lead mb-0">{{quintaSecao.texto}}</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </section>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Parceiros -->
+      <section id="secaoZero" class="features-icons bg-light text-center">
+        <div class="container">
+          <h5><a href="#page-top">{{ galeria2.titulo }}</a></h5>
+          <p class="font-weight-light mb-0">{{ galeria2.texto }}</p>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                <div class="features-icons-icon d-flex">
+                  <i class="icon-screen-desktop m-auto text-primary"></i>
+                </div>
+                <h3>Fully Responsive</h3>
+                <p class="lead mb-0">
+                  This theme will look great on any device, no matter the size!
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                <div class="features-icons-icon d-flex">
+                  <i class="icon-layers m-auto text-primary"></i>
+                </div>
+                <h3>Bootstrap 4 Ready</h3>
+                <p class="lead mb-0">
+                  Featuring the latest build of the new Bootstrap 4 framework!
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                <div class="features-icons-icon d-flex">
+                  <i class="icon-check m-auto text-primary"></i>
+                </div>
+                <h3>Easy to Use</h3>
+                <p class="lead mb-0">
+                  Ready to use with your own content, or customize the source
+                  files!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- VUE.JS -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script type="text/javascript">
-    var app = new Vue({
-      el: '#app',
-        data: {
-          url_foto: "img/bg-showcase-1.jpg",
-          foto_principal: {
-            frase: "Pilates é saúde! Pilates é vida! #Movimente-se!",
-            foto: ""
-          },
-          redes_sociais : {
-            instagram: true,
-            isnta_link: "https://www.instagram.com/pilatesmonicasales/?hl=pt-br",
-            facebook: false,
-            face_link: "",
-            whatsapp: true,
-            whats_link: "https://api.whatsapp.com/send?phone=5512997417970",
-            twiter: false,
-            twiter_link: "",
-            youtube: false,
-            youtube_link: ""
-          },
-          primeira_secao: {
-            titulo: "Por que Pilates?",
-            conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
-          },
-          segunda_secao: {
-            titulo: "Por que Pilates?",
-            conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
-          },
-          terceira_secao: {
-            titulo: "Por que Pilates?",
-            conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
-          },
-          quarta_secao: {
-            titulo: "Por que Pilates?",
-            conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
-          },
-          quinta_secao: {
-            titulo: "Por que Pilates?",
-            conteudo: '"Pilates desenvolve um corpo uniforme, corrige posturas erradas, restaura a vitalidade física, vigora a mente e eleva o espírito!" - Joseph Pilates!',
-            url_foto: 'img/bg-showcase-1.jpg'
-          },
-          testemunho: {
-            titulo: "O que nossos clientes estão dizendo ...",
-            pessoas : [
-              {
-                nome: "Margaret E.",
-                comentario: "This is fantastic! Thanks so much guys!",
-                foto: "img/testimonials-1.jpg"
-              },
-              {
-                nome: "Fred S.",
-                comentario: "Bootstrap is amazing. I've been using it to create lots of super nice landing pages",
-                foto: "img/testimonials-2.jpg"
-              },
-              {
-                nome: "Sarah W.",
-                comentario: "Thanks so much for making these free resources available to us!",
-                foto: "img/testimonials-3.jpg"
-              }
-            ]
-          }
-      }
-    })
-  </script>
+      <!-- Call to Action -->
+      <section id="redes" class="call-to-action text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div v-if="false" class="col-xl-9 mx-auto">
+              <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+            </div>
+            <div v-if="false" class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+              <form>
+                <div class="form-row">
+                  <div class="col-12 col-md-9 mb-2 mb-md-0">
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your email..."
+                    />
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <button
+                      type="submit"
+                      class="btn btn-block btn-lg btn-primary"
+                    >
+                      Sign up!
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <!-- Footer -->
+      <footer id="footer" class="footer bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+              <ul class="list-inline mb-2">
+                <li class="list-inline-item">
+                  <a href="#">About</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="#">Contact</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="#">Terms of Use</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+              <p class="text-muted small mb-4 mb-lg-0">
+                &copy; Your Website 2020. All Rights Reserved.
+              </p>
+            </div>
 
+            <!-- INI Redes Sociais Administráveis: -->
+            <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+              <ul class="list-inline mb-0">
+                <li v-if="whatsapp.link" class="list-inline-item mr-3">
+                  <a v-bind:href="whatsapp.link">
+                    <i class="fab fa-whatsapp fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li v-if="facebook.link" class="list-inline-item mr-3">
+                  <a v-bind:href="facebook.link">
+                    <i class="fab fa-facebook fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li v-if="twitter.link" class="list-inline-item mr-3">
+                  <a v-bind:href="twitter.link">
+                    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li v-if="instagram.link" class="list-inline-item">
+                  <a v-bind:href="instagram.link">
+                    <i class="fab fa-instagram fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li v-if="linkedin.link" class="list-inline-item">
+                  <a v-bind:href="linkedin.link">
+                    <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li v-if="youtube.link" class="list-inline-item">
+                  <a v-bind:href="youtube.link">
+                    <i class="fab fa-youtube fa-2x fa-fw"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- FIM Mídias Sociais Administráveis: -->
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- VUE.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: "#app",
+        async mounted() {
+          this.elements = await fetch("http://localhost:3000/posts/").then(
+            function (response) {
+              return response.json();
+            }
+          );
+          this.instagram = this.elements.filter(function (elements) {
+            return elements.chave == "instagram";
+          })[0];
+          this.whatsapp = this.elements.filter(function (elements) {
+            return elements.chave == "whatsapp";
+          })[0];
+          this.facebook = this.elements.filter(function (elements) {
+            return elements.chave == "facebook";
+          })[0];
+          this.twitter = this.elements.filter(function (elements) {
+            return elements.chave == "twitter";
+          })[0];
+          this.youtube = this.elements.filter(function (elements) {
+            return elements.chave == "youtube";
+          })[0];
+          this.linkedin = this.elements.filter(function (elements) {
+            return elements.chave == "linkedin";
+          })[0];
+          this.galeria = this.elements.filter(function (elements) {
+            return elements.chave == "galeria";
+          })[0];
+          this.galeriaUm = this.elements.filter(function (elements) {
+            return elements.chave == "galeria_um";
+          })[0];
+          this.galeriaDois = this.elements.filter(function (elements) {
+            return elements.chave == "galeria_dois";
+          })[0];
+          this.galeriaTres = this.elements.filter(function (elements) {
+            return elements.chave == "galeria_tres";
+          })[0];
+          this.fotoPrincipal = this.elements.filter(function (elements) {
+            return elements.chave == "foto_principal";
+          })[0];
+          this.primeiraSecao = this.elements.filter(function (elements) {
+            return elements.chave == "primeira";
+          })[0];
+          this.segundaSecao = this.elements.filter(function (elements) {
+            return elements.chave == "segunda";
+          })[0];
+          this.terceiraSecao = this.elements.filter(function (elements) {
+            return elements.chave == "terceira";
+          })[0];
+          this.quartaSecao = this.elements.filter(function (elements) {
+            return elements.chave == "quarta";
+          })[0];
+          this.quintaSecao = this.elements.filter(function (elements) {
+            return elements.chave == "quinta";
+          })[0];
+          this.galeria2 = this.elements.filter(function (elements) {
+            return elements.chave == "galeria2";
+          })[0];
+        },
+        data() {
+          return {
+            elements: [],
+            instagram: {},
+            whatsapp: {},
+            facebook: {},
+            twitter: {},
+            youtube: {},
+            linkedin: {},
+            galeria: {},
+            galeriaUm: {},
+            galeriaDois: {},
+            galeriaTres: {},
+            fotoPrincipal: {},
+            primeiraSecao: {},
+            segundaSecao: {},
+            terceiraSecao: {},
+            quartaSecao: {},
+            quintaSecao: {},
+            galeria2: {},
+          };
+        },
+      });
+    </script>
+  </body>
 </html>
