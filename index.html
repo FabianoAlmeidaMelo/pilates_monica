@@ -342,7 +342,7 @@
       var app = new Vue({
         el: "#app",
         async mounted() {
-          this.elements = await fetch("http://localhost:3000/posts/").then(
+          this.elements = await fetch("https://smartiscool.online/sites/api/conteudo/2/").then(
             function (response) {
               return response.json();
             }
